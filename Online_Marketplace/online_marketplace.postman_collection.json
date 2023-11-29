@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "0b275e84-df27-4d55-a61e-f09a1c88b658",
+		"name": "online_marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19435472"
+	},
+	"item": [
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/health"
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\":\"oneiundg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"user1\",\r\n    \"password\":\"oneiundg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/products"
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Createproducts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzI4NzM4MTYsInBhc3N3b3JkIjoicGFzcyIsInVzZXJuYW1lIjoidXNlcjAxIn0.cDbuetHGGPqnNCWnK2tpHQlC9BQTY3c1b0LQaYAcczU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Phone\",\r\n    \"description\":\"Moto G11\",\r\n    \"price\":12000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDEyMzM4NzMsInBhc3N3b3JkIjoicGFzcyIsInVzZXJuYW1lIjoidXNlcjA1In0.Lx95rNQZjGh4RaKwf4tiTcQTquzf1zs13Os7rFdZ_xw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Phone\",\r\n    \"description\":\"Redmi\",\r\n    \"price\":10000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDEyMzM4NzMsInBhc3N3b3JkIjoicGFzcyIsInVzZXJuYW1lIjoidXNlcjA1In0.Lx95rNQZjGh4RaKwf4tiTcQTquzf1zs13Os7rFdZ_xw"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/products/1"
+			},
+			"response": []
+		}
+	]
+}
